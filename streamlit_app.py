@@ -1,4 +1,3 @@
 import streamlit
-
-streamlit.title|('swapna title')
+streamlit.title('swapna title')
 
