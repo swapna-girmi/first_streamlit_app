@@ -50,3 +50,8 @@ my_cur.execute("insert into fruit_load_list values ('fromstreamlit')")
 streamlit.stop();
 
 
+def insert_row_snowflake(new_fruit):
+  with my_cnx.curser() as my_cur:
+    my_cur.execute("insert into fruit_load_list values('jackfruit','papaya','guava','kiwi')")
+
+
