@@ -33,7 +33,7 @@ try:
         streamlit.error("please select a fruit to get inforamtion about.")
     else:
         fruityvice_responce = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-        fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+        fruityvice_normalized = pandas.json_normalize(fruityvice_responce.json())
         streamlit.dataframe(fruityvice_normalized)
 except URLError as e:
     streamlit.error()
