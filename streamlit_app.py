@@ -36,7 +36,7 @@ try:
     fruityvice_responce = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     streamlit.dataframe(fruityvice_normalized)
-expect exception as e:
+except exception as e:
     print(e)
 #streamlit.write('The user entered ', fruit_choice)
 
