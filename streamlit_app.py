@@ -71,7 +71,7 @@ streamlit.header("The fruit load list contains:")
 #list=['jackfruit', 'papaya', 'guava', 'kiwi']
 def insert_row_snowflake(new_fruit):
         with my_cnx.cursor() as my_cur:
-                my_cur.execute("insert into fruit_load_list values('jackfruit', 'papaya', 'guava' ,'kiwi')")
+                my_cur.execute("insert into fruit_load_list values('"+ new_fruit +"')")
                 #my_cur.executemany('insert into fruit_load_list (FRUIT_NAME) values (?)', 
                    #[(n,) for n in list])
                 return "Thanks for adding " + new_fruit
