@@ -1,6 +1,6 @@
 import streamlit
 #import pandas
-#import requests
+import requests
 #import snowflake.connector
 #from urllib.error import URLError
 
@@ -40,7 +40,7 @@ except exception as e:
     print(e)
 #streamlit.write('The user entered ', fruit_choice)
 
-import requests
+
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" +fruit_choice)
 
 
